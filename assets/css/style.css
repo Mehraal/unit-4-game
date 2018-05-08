@@ -1,0 +1,56 @@
+body {
+    /*  background-image: url("./assets/images/polygon-wallpaper-13.jpg"); */
+    background-color: black;
+    width: 100%;
+    padding: 20px 60px 20px 60px;
+
+}
+h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 60px;
+}
+h3 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+}
+
+.jumbotron {
+    background-image: ("./assets/images/polygon-wallpaper-13.jpg");
+    background-color:aqua;
+    margin: 20px 80px 20px 80px;
+    height: 300px;
+    padding:20px 40px 20px 40px;
+
+}
+img { 
+    height:300px;
+    margin: 20px 20px 20px 350px;
+    float: center;
+}
+#button-1 {
+    block-size: 100px;
+    width:60px;
+    
+}
+
+#button-2 {
+    block-size: 100px;
+     width:60px;
+}
+
+#button-3 {
+    block-size: 100px;
+     width:60px;
+}
+
+#button-4 {
+    block-size: 100px;
+     width:60px;
+}
+
+
+
+
+
+
+
