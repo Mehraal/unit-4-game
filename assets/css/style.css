@@ -1,56 +1,39 @@
 body {
-    /*  background-image: url("./assets/images/polygon-wallpaper-13.jpg"); */
-    background-color: black;
-    width: 100%;
-    padding: 20px 60px 20px 60px;
+  background-image: url("../images/background_img.jpg");
+  background-repeat: repeat;
 
-}
-h1 {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 60px;
-}
-h3 {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 20px;
 }
 
 .jumbotron {
-    background-image: ("./assets/images/polygon-wallpaper-13.jpg");
-    background-color:aqua;
-    margin: 20px 80px 20px 80px;
-    height: 300px;
-    padding:20px 40px 20px 40px;
+    width: 25%;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    background-color: #c76a2c;
+    color: black;
+    height:120px;
+}
+ 
+h1 {
+    margin-top: -60px;
+    margin-left: 20px;
+} 
 
-}
-img { 
-    height:300px;
-    margin: 20px 20px 20px 350px;
-    float: center;
-}
-#button-1 {
-    block-size: 100px;
-    width:60px;
+.container {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 10px 400px 10px 20px;
+    padding: 10px;
+    float: left;
+    background-color: #d1ba9e;
+    width: 40%;
+    height: 20%;
     
 }
 
-#button-2 {
-    block-size: 100px;
-     width:60px;
+#header {
+    font-size: 16px;
 }
-
-#button-3 {
-    block-size: 100px;
-     width:60px;
+p {
+    font-size: 16px;
 }
-
-#button-4 {
-    block-size: 100px;
-     width:60px;
-}
-
-
-
-
-
-
 

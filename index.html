@@ -7,199 +7,252 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
         crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" media="screen" href="./assets/css/style.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="./assets/css/style.css">
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <!-- <script src="game.js"></script> -->
-    
 </head>
 <body>
-
+    
     <div class="jumbotron">
-        <h1 class="text-center">Crystals Collector</h1>
-        <h3 class="text-center">You will be given a random number at the start of the game. There are four crystals below. By clicking on a crystal you
-            will add a specific amount of points to your total score. You win the game by matching your total score to random
-            number, you lose the game if your total score goes above the random number. The value of each crystal is hidden from
-            you until you click on it. Each time when the game starts, the game will change the values of each crystal.</h3>
-        <!-- <img src="https://i.pinimg.com/736x/5d/8f/9e/5d8f9e328cd9b66d2d0e6b4da38cd505.jpg"> -->
-        
+        <!-- <div class="row"> -->
+        <h1 class="text-left"><strong>Crystal Collector!</strong></h1>
+        </div>
     </div>
-
-
+    
 
     <div class="container">
-        <div class= "row">
-            <div class="col-lg-6">
-                <div class= "panel panel-default">
-                    <div class="panel heading">
-                        <h3 class= "panel title">Crystals</h3>
-                    </div>
-
-                    <div class="panel-body">
-                        <button id="button-1" class="btn btn-primary number" value="4">
-                            <span class="glyphicon glyphicon-usd"></span>
-                        </button>
-                        <button id="button-2" class="btn btn-primary number" value="3">
-                            <span class="glyphicon glyphicon-fire"></span>
-                        </button>
-                        <button id="button-3" class="btn btn-primary number" value="2">
-                            <span class="glyphicon glyphicon-heart"></span>
-                        </button>
-                        <button id="button-4" class="btn btn-primary number" value="1">
-                            <span class="glyphicon glyphicon-star"></span>
-                        </button>
-                    </div>
+       
+        <div class="row">
+            <div class="col-md-7">
+                <div id="header" class ="text-center">
+                        <p class="text-center">You will be given a random number at the start of the game. There are four crystals below. By clicking on a crystal you will
+                        add a specific amount of points to your total score. </p>
+                        <p class="text-center">You win the game by matching your total score to random number, you
+                        lose the game if your total score goes above the random number.</p>
+                        <p class="text-center">The value of each crystal is hidden from you until you click
+                        on it. Each time when the game starts, the game will change the values of each crystal.</p>
                 </div>
             </div>
-
-        <div class = "row">
-            <div class="col-lg-6">
-            <div class= "panel panel-default">
-                <div class= "panel-heading">
-                    <h3 class="panel-title">Result</h3>
-                </div>
-                <div class= "panel-body">
-                    <h1 id="first-number"></h1>
-                    <h1 id="operator"></h1>
-                    <h1 id="second-number"></h1>
-                    <hr>
-                    <h1 id="result"></h1>
-                </div>
-            </div>
-            </div>
+           
         </div>
     </div>
-    </div>
 
-    <div class="row">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card mb-4">
+                    <div class="win-count">
+                        <h3 class="card-title text-center">Win Count</h3>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="text-center" id="win-count">0</h3>
+                    </div>
+                </div>
+            </div>
             
-            <div class="col-lg-4">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h3 class="panel-title">Wins </h3>
-                    </div>
-                    <div class="panel-body">
-                        <h1 id="first-number"></h1>
-                        <h1 id="operator"></h1>
-                        <h1 id="second-number"></h1>
-                        <hr>
-                        <h1 id="win"></h1>
-                    </div>
-                </div>
-            </div>
-        
-    
-
-        
-        <div class="col-lg-4">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h3 class="panel-title">Losses</h3>
-                </div>
-                <div class="panel-body">
-                    <h1 id="first-number"></h1>
-                    <h1 id="operator"></h1>
-                    <h1 id="second-number"></h1>
-                    <hr>
-                    <h1 id="loss"></h1>
-                </div>
-            </div>
-        </div>
-        
-        <div class="col-lg-4">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h3 class="panel-title">Total Score</h3>
-                </div>
-                <div class="panel-body">
-                    <h1 id="first-number"></h1>
-                    <h1 id="operator"></h1>
-                    <h1 id="second-number"></h1>
-                    <hr>
-                    <h1 id="totalscore"></h1>
-                </div>
-            </div>
-        </div>
-    </div>
             
+            <div class="col-md-3">
+                <div class="card mb-4">
+                    <div class="loss-count">
+                        <h3 class="card-title text-center">Loss Count</h3>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="text-center" id="loss-count">0</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    
 
-     <script type="text/javaScript">
-    var num1 = "";
-    var num2 = "";
-    var operator;
-    var isOp = false;
-    var newNum;
-    $(document).ready(function() {
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <div class="target-score">
+                        <h3 class="title text-center">Target Score</h3>
+                    </div>
+                     <div class="card-body">
+                        <h3 id="target-score" class="text-center"></h3>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-    $(".numnber").click (function() {
-        if(!isOp)
-    {
-        $("#first-numnber").append($(this).attr("value"));
-        num1 = num1.concat($(this).attr("value"));
-        console.log(num1);
-    }
-    if(isOp)
-    {
-        $("#second-number").append($(this).attr("value"));
-        num2 = num2.concat($(this).attr("value"));
-        console.log(num2);
-    }
-    
-});
-    
-    
-    
-    $(".operator").click (function() {
-        if(!isOp)
-    {
-        op = $(this).attr("value");
-        console.log(op);
-        $("#operator").append($(this).attr("value"));
-        isOp = true;
-    }
-    
-});
-    
-    $(".equal").click (function() {
-        if(op === "+")
-    {
-        newNum = parseInt(num1) + parseInt(num2);
-        $("#result").append(newNum);
-    }
-    else if(op === "-")
-    {
-        newNum = parseInt(num1) - parseInt(num2);
-        $("#result").append(newNum);
-    }
-    else if(op === "x")
-    {
-        newNum = parseInt(num1)* parseInt(num2);
-        $("#result").append(newNum);
-    }
-    else if(op=== "/")
-    {
-        newNum = parseInt(num1) / parseInt(num2);
-        $("#result").append(newNum);
-    }
-});
-    $(".clear").click (function(){
-  isOp = false;
-  op = "";
-  num1= "";
-  num2 ="";
-  $("#first-number").empty();
-  $("#second-number").empty();
-  $("#operator").empty();
-  $("#result").empty();
-});
 
-});
+        <div class="row">
 
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h3 class="card-title text-center">Crystal Selection</h3>
+                    </div>
+                    <div class="card-body">
+                        <img id ="blue" src ="./images/blue.png">
+                        <img id ="green" src ="./images/green.png">
+                        <img id ="red" src ="./images/red.png">
+                        <img id ="yellow" src ="./images/yellow.png">
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h3 class="card-title text-center">Your Score</h3>
+                    </div>
+                    <div class="card-body">
+                        <h3 id="your-score" class="text-center"></h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    <script type=text/javascript>
+    
+    var crystal = {
+        blue:
+        {
+            name: "Blue",
+            value: 0
+        },
+        green:
+        {
+            name: "Green",
+            value: 0
+        },
+        red:
+        {
+             name: "Red",
+            value: 0
+        },
+        yellow:
+        {
+            name: "Yellow",
+            value: 0
+        }
+    };
+    
+   
+    var currentScore = 0;
+    var targetScore = 0;
+    
+    
+    var winCount = 0;
+    var lossCount = 0;
     
     
     
+    var getRandom = function (min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    };
     
     
- </script>
+    var startGame = function () {
+    
+       
+        currentScore = 0;
+    
+        
+        targetScore = getRandom(19, 120);
+    
+        
+        crystal.blue.value = getRandom(1, 12);
+        crystal.red.value = getRandom(1, 12);
+        crystal.green.value = getRandom(1, 12);
+        crystal.yellow.value = getRandom(1, 12);
+    
+        
+        $("#your-score").text(currentScore);
+        $("#target-score").text(targetScore);
+    
+    
+       
+        console.log("-----------------------------------");
+        console.log("Target Score: " + targetScore);
+        console.log("Blue: " + crystal.blue.value + " | Green: " + crystal.green.value + " | Red: " + crystal.red.value +
+            " | Yellow: " + crystal.yellow.value);
+        console.log("-----------------------------------");
+    };
+    
+    
+    var checkWin = function () {
+    
+        
+        if (currentScore > targetScore) {
+            alert("Sorry. You lost!");
+            console.log("You Lost");
+    
+           
+            lossCount++;
+    
+            
+            $("#loss-count").text(lossCount);
+    
+           
+            startGame();
+        }
+    
+        else if (currentScore === targetScore) {
+            alert("Congratulations! You Won!");
+            console.log("You Won!");
+    
+            winCount++;
+    
+            
+            $("#win-count").text(winCount);
+    
+            
+            startGame();
+        }
+    
+    };
+    
+    var addValues = function (clickedCrystal) {
+    
+      
+        currentScore += clickedCrystal.value;
+    
+      
+        $("#your-score").text(currentScore);
+    
+       
+        checkWin();
+    
+        
+        console.log("Your Score: " + currentScore);
+    };
+    
+    startGame();
+    
+    $("#blue").click(function () {
+        addValues(crystal.blue);
+    });
+    
+    $("#red").click(function () {
+        addValues(crystal.red);
+    });
+    
+    $("#green").click(function () {
+        addValues(crystal.green);
+    });
+    
+    $("#yellow").click(function () {
+        addValues(crystal.yellow);
+    });
+    
+    
+    </script>
+    
     
 </body>
+    
 </html>
+
+        
+        
+
+       
+        
+            
+    
+    
