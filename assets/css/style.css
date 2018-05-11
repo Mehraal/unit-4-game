@@ -30,10 +30,31 @@ h1 {
     
 }
 
+ #two {
+    color: #021809;
+    width: 20%;
+}
+
 #header {
     font-size: 16px;
 }
 p {
     font-size: 16px;
 }
+
+/* .card-body {
+    height:100px; */
+    /* background-color: #09a03c; */
+    
+/* } 
+.target-score {
+    background-color: #09a03c;
+    
+}
+.win-count {
+    background-color: #09a03c;
+    
+
+}
+
 
